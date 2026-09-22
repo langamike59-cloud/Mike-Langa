@@ -1,0 +1,172 @@
+<style>
+.cartao-BI {
+    width: 420px;
+    height: 265px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+    background-image: linear-gradient(
+        to bottom,
+        #fff59d 0%,
+        #ded058 15%,
+        #aad3ac 15%,
+        #80ffb9 85%,
+        #ded058 85%,
+        #ded058 100%
+    );
+
+    overflow: hidden;
+    position: relative;
+    color: #000;
+}
+
+.cartao-BI .linha-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.cartao-BI .linha-dupla {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    margin-bottom: 10px;
+}
+
+.cartao-BI .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao-BI label {
+    font-size: 8px;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.cartao-BI strong {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Linha que agrupa o Microchip e o Nome do Pai lado a lado */
+.cartao-BI .linha-chip-pai {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o chip e o nome do pai */
+    margin-bottom: 8px;
+}
+
+/* Chip na metade esquerda */
+.cartao-BI .chip-img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #777;
+    flex-shrink: 0;
+}
+
+/* Bloco do Director Nacional */
+.cartao-BI .area-director {
+    text-align: center;
+    width: 100px;
+}
+
+.cartao-BI .area-director label {
+    font-size: 6px;
+    line-height: 1;
+}
+
+.cartao-BI .area-director img {
+    width: 65px;
+    height: auto;
+    margin-top: 0.5px;
+}
+
+/* Número do Documento */
+.cartao-BI .numero-documento {
+    position: absolute;
+    right: 30px;
+    bottom: 75px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+/* Zona de Leitura Ótica (MRZ) */
+.cartao-BI .mrz {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<div class="cartao-BI">
+    <!-- Linha do Topo: Data de Emissão, Válido Até e O Director (Lado a Lado) -->
+    <div class="linha-topo">
+        <div class="campo">
+            <label>Data de Emissão / Issuance Date:</label>
+            <strong>06/02/2024</strong>
+        </div>
+
+        <div class="campo">
+            <label>Válido Até / Expiry Date:</label>
+            <strong>05/02/2029</strong>
+        </div>
+
+        <div class="area-director">
+            <label>O Director Nacional /</label>
+            <label>The National Director:</label>
+            <img src="ASS DE DIRECTOR.jpg" alt="Assinatura">
+        </div>
+    </div>
+
+    <!-- Emitido Em e Estado Civil -->
+    <div class="linha-dupla">
+        <div class="campo">
+            <label>Emitido Em / Issued in:</label>
+            <strong>CIDADE DE MAPUTO</strong>
+        </div>
+
+        <div class="campo" style="margin-right: 25px;">
+            <label>Estado Civil / Marital Status:</label>
+            <strong>SOLTEIRO</strong>
+        </div>
+    </div>
+
+    <!-- Microchip na metade esquerda e Nome do Pai ao seu lado -->
+    <div class="linha-chip-pai">
+        <img class="chip-img" src="CHIP .jpeg" alt="Chip">
+        <div class="campo">
+    
+            <label>Nome do Pai / Father Name:</label>
+            <strong>DEOCLECIANO SAMUEL LANGA</strong>
+        </div>
+    </div>
+
+    <!-- Nome da Mãe logo abaixo do nome do pai -->
+    <div class="campo">
+        <label>Nome da Mãe / Mother Name:</label>
+        <strong>MERCIA ADRIANO MATSINHE</strong>
+    </div>
+
+    <!-- Número do Documento -->
+    <div class="numero-documento">
+        AA6391812
+    </div>
+
+    <!-- Código MRZ -->
+    <div class="mrz">
+        IDMOZAA63918126100107532065F&lt;&lt;<br>
+        0912068M2902050MOZ&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;1<br>
+        LANGA&lt;&lt;MIKE&lt;DEOCLECIANO&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+    </div>
+</div>

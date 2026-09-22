@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Mike Diocleciano Langa, estudante de Suporte Informático no ITC, Maputo.">
+    <meta name="theme-color" content="#070b12">
+    <title>Mike Diocleciano Langa | Portfólio</title>
+
+<style> 
+:root {
+
+    
+    --bg: #070b12;                
+    --bg-soft: #0b111a;           
+    --bg-card: #101823;            
+    --bg-card-hover: #15202d;      
+    --border: #223140;           
+    --border-hover: #3a526a;       
+    --white: #f5f7fa;              
+    --text: #d6dfe8;               
+    --muted: #98a8b9;              
+    --muted-soft: #6d7e90;         
+    --gold: #d7ad52;              
+    --gold-light: #e8c778;       
+    --gold-soft: rgba(215, 173, 82, 0.08); 
+    --blue: #3f8ed1;              
+
+    
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
+    --radius: 10px;                
+    --radius-sm: 6px;              
+
+    
+    --velocidade: 0.3s;
+    --velocidade-lenta: 0.5s;
+    --curva: cubic-bezier(0.4, 0, 0.2, 1);
+    --distancia-subir: -4px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;      
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;            
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    font-style: italic;            
+    color: var(--muted-soft);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+button, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+
+.container {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+.section-dark {
+    background: var(--bg-soft);
+    border-top: 1px solid #141d28;
+    border-bottom: 1px solid #141d28;
+}
+
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+
+
+.section-heading {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+
+.card-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+
+
+h1, h2, h3, h4 {
+    color: var(--white);
+    line-height: 1.2;
+}
+
+
+.accent {
+    color: var(--gold);
+}
+
+
+
+.page-edge {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    z-index: 1000;
+}
+
+.site-header {
+    position: sticky;              
+    top: 4px;
+    z-index: 100;
+    background: rgba(7, 11, 18, 0.92);
+    backdrop-filter: blur(12px);   
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #16202c;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+.logo-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: var(--gold-soft);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: flex-end;
+}
+
+.main-nav a {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    position: relative;            
+    padding: 6px 0;
+}
+
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;                      
+    height: 2px;                   
+    background: var(--gold);     
+    border-radius: 1px;
+}
+
+
+
+
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0 80px;
+}
+
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(60px);
+}
+
+.hero::before {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -100px;
+    background: rgba(63, 142, 209, 0.06);   
+}
+
+.hero::after {
+    width: 450px;
+    height: 450px;
+    bottom: -120px;
+    left: -100px;
+    background: rgba(215, 173, 82, 0.05);   
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+.hero-role {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: 600px;
+}
+
+.hero-role strong {
+    color: var(--gold-light);
+    font-weight: 600;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 0.98rem;
+    margin-bottom: 32px;
+    max-width: 580px;
+}
+
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+
+
+
+.button-primary {
+    background: var(--gold);
+    color: #101318;
+    border-color: var(--gold);
+    box-shadow: 0 8px 20px rgba(215, 173, 82, 0.2);
+}
+
+.button-outline {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--white);
+    border-color: var(--border);
+}
+
+.button-ghost {
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--border);
+}
+
+
+.full-width {
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+.portrait-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portrait-frame {
+    position: relative;
+    width: min(420px, 175vw);
+    aspect-ratio: 1;
+    border-radius: 20px;
+    transform: rotate(0deg);
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+.portrait-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 22px;
+  
+    transform: rotate(-3deg);      
+}
+
+.portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-soft) 100%);
+    box-shadow: var(--shadow);
+}
+
+.portrait-caption {
+    margin-top: 24px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    color: var(--muted-soft);
+    text-transform: uppercase;
+}
+
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 24px;
+}
+
+.about-text h3 {
+    font-size: 1.45rem;
+    margin: 8px 0 20px;
+    font-weight: 700;
+}
+
+.about-text p {
+    color: var(--muted);  quem sou e as restantes frases da 1 coluna
+    margin-bottom: 14px;
+    font-size: 0.96rem;
+}
+
+.about-text p strong {
+    color: var(--white);   suporte informatico
+    font-weight: 600;
+}
+
+
+.values-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.value-tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--gold-soft);
+    border: 1px solid rgba(215, 173, 82, 0.25);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+
+.interest-list {
+    list-style: none;
+    margin-top: 18px;
+}
+
+.interest-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #1e2b38;
+    font-size: 0.93rem;
+}
+
+.interest-list li:last-child {
+    border-bottom: none;
+}
+
+.list-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 24px;
+    font-variant-numeric: tabular-nums;
+}
+
+
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.process-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;              
+}
+
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--gold);
+}
+
+.process-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgba(215, 173, 82, 0.15);
+    display: block;
+    margin-bottom: 8px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.process-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.process-card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+
+.cap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.cap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+}
+
+.cap-number {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cap-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.cap-card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold) 0%, rgba(215, 173, 82, 0.2) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 24px 24px 24px 48px;
+    margin-bottom: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+.timeline-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+
+
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.timeline-place {
+    color: var(--gold-light);
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+}
+
+.timeline-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.timeline-year {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--muted-soft);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.5px;
+}
+
+
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+
+.project-row.reverse {
+    direction: rtl;
+}
+
+.project-row.reverse > * {
+    direction: ltr;
+}
+
+.project-visual {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;              
+    border: 1px solid var(--border);
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, var(--bg-card) 0%, #1a2635 100%);
+}
+
+
+.project-index {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    z-index: 2;
+    padding: 5px 10px;
+    background: rgba(7, 11, 18, 0.8);
+    border: 1px solid rgba(215, 173, 82, 0.3);
+    border-radius: var(--radius-sm);
+    backdrop-filter: blur(4px);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.project-content > p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.project-dossier {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+}
+
+.project-dossier dt {
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.project-dossier dd {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.project-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.text-link.primary {
+    color: var(--gold-light);
+}
+
+
+
+.curriculo {
+    background: var(--bg-soft);
+    border-top: 1px solid #141d28;
+    border-bottom: 1px solid #141d28;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.curriculo-conteudo {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 8%;
+}
+
+.curriculo h2 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.curriculo p {
+    color: var(--muted);
+    margin-bottom: 32px;
+}
+
+
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.skill-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.skill-head h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.skill-percent {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+
+.progress {
+    height: 6px;
+    background: #1e2b38;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(215, 173, 82, 0.3);
+    position: relative;
+}
+
+
+
+
+.other-tools {
+    margin-top: 24px;
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.tool-tags span {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    background: #16212c;
+    border: 1px solid #233241;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-card);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-soft) 100%);
+}
+
+.gallery-item figcaption {
+    padding: 16px 18px;
+    border-top: 1px solid var(--border);
+}
+
+.gallery-item figcaption strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.gallery-item figcaption small {
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+
+.contact-channels {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;              
+    background: var(--bg-card);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+}
+
+
+.contact-link + .contact-link {
+    border-top: 1px solid var(--border);
+}
+
+.contact-link.static {
+    cursor: default;               
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.contact-value {
+    flex: 1;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 16px;
+}
+
+
+.contact-arrow {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.contact-arrow::before {
+    content: "→";
+}
+
+
+
+.contact-form h3 {
+    font-size: 1.3rem;
+    margin: 8px 0 22px;
+    font-weight: 700;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: #090f17;
+    border: 1px solid #2d3f51;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-size: 0.92rem;
+    outline: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #6b7d8f;
+}
+
+
+.form-field input:hover,
+.form-field textarea:hover {
+    border-color: #3d546a;
+}
+
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(215, 173, 82, 0.12);
+    background: #0c141e;
+}
+
+.form-field textarea {
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+
+.site-footer {
+    background: #05080d;
+    border-top: 1px solid #151e29;
+    padding: 50px 0 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--muted-soft);
+    font-size: 0.82rem;
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -20px;
+    }
+}
+
+
+
+
+.hero-content > * {
+    animation: entrar-subindo 0.8s var(--curva) both;
+}
+
+
+.hero-content > *:nth-child(1) { animation-delay: 0.10s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.20s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.30s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.40s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.50s; }
+
+
+.portrait-wrapper {
+    animation: entrar-subindo 0.9s var(--curva) 0.35s both;
+}
+
+
+.portrait-frame {
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+.status-dot.active {
+    animation: pulsar 2s infinite;
+}
+
+
+
+.main-nav a {
+    transition: color var(--velocidade) var(--curva);
+}
+
+.main-nav a::after {
+    transition: width var(--velocidade) var(--curva);
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+    color: var(--gold-light);
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after,
+.main-nav a.active::after {
+    width: 100%;                   
+}
+
+
+
+.button {
+    transition: transform var(--velocidade) var(--curva),
+                background-color var(--velocidade) var(--curva),
+                color var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva);
+}
+
+.button:hover,
+.button:focus {
+    transform: translateY(-2px);
+}
+
+.button-arrow {
+    transition: transform var(--velocidade) var(--curva);
+}
+
+.button:hover .button-arrow,
+.button:focus .button-arrow {
+    transform: translateX(3px);
+}
+
+
+.button-primary:hover,
+.button-primary:focus {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    box-shadow: 0 12px 28px rgba(215, 173, 82, 0.28);
+}
+
+.button-outline:hover,
+.button-outline:focus {
+    border-color: var(--gold);
+    color: var(--gold-light);
+    background: var(--gold-soft);
+}
+
+.button-ghost:hover,
+.button-ghost:focus {
+    color: var(--white);
+    border-color: var(--border-hover);
+}
+
+
+.card {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva),
+                background var(--velocidade) var(--curva);
+}
+
+.card:hover {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow);
+}
+
+
+.process-card {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva),
+                background var(--velocidade) var(--curva);
+}
+
+.process-card::before {
+    transition: height var(--velocidade) var(--curva);
+}
+
+.process-card:hover {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow);
+}
+
+.process-card:hover::before {
+    height: 100%;                 
+}
+
+
+.cap-card {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva),
+                background var(--velocidade) var(--curva);
+}
+
+.cap-card:hover {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow);
+}
+
+
+.skill-card {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva),
+                background var(--velocidade) var(--curva);
+}
+
+.skill-card:hover {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow);
+}
+
+
+.timeline-item {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva);
+}
+
+.timeline-item:hover {
+    transform: translateX(4px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow);
+}
+
+.timeline-item::before {
+    transition: background var(--velocidade) var(--curva),
+                transform var(--velocidade) var(--curva);
+}
+
+.timeline-item:hover::before {
+    background: var(--gold);
+    transform: scale(1.1);
+}
+
+
+.gallery-item {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva);
+}
+
+.gallery-item:hover {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow);
+}
+
+
+
+.project-visual {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva);
+}
+
+.project-row:hover .project-visual {
+    transform: translateY(var(--distancia-subir));
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.project-img {
+    transition: transform var(--velocidade-lenta) var(--curva);
+}
+
+.project-row:hover .project-img {
+    transform: scale(1.03);
+}
+
+
+.gallery-item img {
+    transition: transform 0.4s var(--curva),
+                opacity var(--velocidade) var(--curva),
+                filter var(--velocidade) var(--curva);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+    filter: brightness(1.1);
+}
+
+
+.portrait-frame {
+    transition: transform var(--velocidade-lenta) var(--curva);
+}
+
+.portrait-frame:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.portrait-ring {
+    transition: transform var(--velocidade-lenta) var(--curva);
+}
+
+.portrait-frame:hover .portrait-ring {
+    transform: rotate(0deg);
+}
+
+
+
+a {
+    transition: color var(--velocidade) var(--curva);
+}
+
+
+.text-link {
+    transition: color var(--velocidade) var(--curva),
+                gap var(--velocidade) var(--curva);
+}
+
+.text-link.primary:hover {
+    color: var(--white);
+    gap: 10px;
+}
+
+
+.value-tag {
+    transition: background var(--velocidade) var(--curva),
+                color var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva);
+}
+
+.value-tag:hover {
+    background: var(--gold);
+    color: #101318;
+    border-color: var(--gold);
+}
+
+
+.tool-tags span {
+    transition: transform var(--velocidade) var(--curva),
+                border-color var(--velocidade) var(--curva),
+                color var(--velocidade) var(--curva),
+                background var(--velocidade) var(--curva);
+}
+
+.tool-tags span:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    color: var(--gold-light);
+    background: var(--gold-soft);
+}
+
+.interest-list li {
+    transition: padding-left var(--velocidade) var(--curva),
+                color var(--velocidade) var(--curva);
+}
+
+.interest-list li:hover {
+    padding-left: 6px;
+    color: var(--white);
+}
+
+
+
+a.contact-link {
+    transition: background var(--velocidade) var(--curva),
+                padding-left var(--velocidade) var(--curva);
+}
+
+a.contact-link:hover {
+    background: var(--bg-card-hover);
+    padding-left: 26px;
+}
+
+.contact-arrow {
+    transition: transform var(--velocidade) var(--curva),
+                color var(--velocidade) var(--curva);
+}
+
+a.contact-link:hover .contact-arrow {
+    transform: translateX(4px);
+    color: var(--gold);
+}
+
+
+.logo {
+    transition: transform var(--velocidade) var(--curva);
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+
+
+.form-field input,
+.form-field textarea {
+    transition: border-color var(--velocidade) var(--curva),
+                box-shadow var(--velocidade) var(--curva),
+                background-color var(--velocidade) var(--curva);
+}
+
+
+
+
+.progress-fill {
+    animation: crescer-barra 1.2s var(--curva);
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .process-grid,
+    .cap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-row,
+    .project-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        direction: ltr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        padding: 14px 0;
+        gap: 14px;
+        min-height: auto;
+    }
+
+    .main-nav {
+        gap: 14px 18px;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 40px;
+        min-height: auto;
+        padding-bottom: 100px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .hero-meta {
+        justify-content: center;
+        margin: 0 auto 20px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+   
+    .portrait-wrapper {
+        order: -1;
+    }
+
+    .portrait-frame {
+        width: 240px;
+    }
+
+    .timeline-year {
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .project-dossier {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-role {
+        font-size: 1.05rem;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .process-grid,
+    .cap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .timeline-item {
+        padding: 20px 20px 20px 44px;
+    }
+
+    .project-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    
+    .contact-link {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px 18px;
+    }
+
+    .contact-value {
+        margin: 0;
+        text-align: left;
+    }
+
+    .contact-arrow {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    
+    a.contact-link:hover .contact-arrow {
+        transform: translate(4px, -50%);
+    }
+}
+
+
+
+
+
+:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+
+::selection {
+    background: var(--gold);
+    color: #101318;
+}
+ </style>
+
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23070b12'/><text x='50' y='63' font-size='34' font-weight='bold' fill='%23d7ad52' text-anchor='middle'>ML</text></svg>">
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  
+    <div class="page-edge"></div>
+
+  
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="logo" href="#inicio" aria-label="Voltar ao início">
+                <span class="logo-mark">ML</span>
+                
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="#inicio" class="active">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#formacao">Formação</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#habilidades">Competências</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Mike Diocleciano
+                        <span class="accent">Langa</span>
+                    </h1>
+                    <p class="hero-role">
+                        Estudante de <strong>Suporte Informático CV4</strong> no ITC, com foco em
+                        manutenção de computadores, redes e desenvolvimento web básico.
+                    </p>
+                    <p class="hero-description">
+                        Este é o meu portfólio académico, onde reúno os projetos e competências
+                        que venho desenvolvendo durante a formação. Construí esta página apenas
+                        com HTML5 e CSS3, sem usar frameworks nem JavaScript, como exercício
+                        prático daquilo que estou a aprender.
+                    </p>
+                    <div class="hero-meta">
+                        <span>Maputo, Moçambique</span>
+                    </div>
+
+                    <div class="button-group">
+                        <a href="#projetos" class="button button-primary">
+                            Ver projetos
+                            
+                        </a>
+                        <a href="#sobre" class="button button-outline">
+                            Conhecer mais
+                        </a>
+                       
+                        
+                    </div>
+                </div>
+
+                <div class="portrait-wrapper">
+                    <div class="portrait-frame">
+                        <div class="portrait-ring"></div>
+                       
+                        <img src="c:\portifo lio IA\PIC de Portifolio.jpeg" alt="Fotografia de Mike Diocleciano Langa" class="portrait-img">
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="sobre" class="section section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Sobre mim</h2>
+                    <p>Conheça o meu percurso, os meus interesses e a forma como estou construindo a minha base em TI.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="card about-text">
+                        <p class="card-eyebrow">QUEM SOU</p>
+                        <h3>Aprender fazendo</h3>
+                        <p>
+                            Sou estudante de <strong>Suporte Informático</strong> no ITC — Instituto
+                            de Transportes e Comunicações, em Maputo. Comecei por estudar Eletricidade
+                            Industrial e hoje concentro os meus estudos em manutenção de computadores,
+                            redes, hardware, instalação de sistemas e páginas web.
+                        </p>
+                        <p>
+                            Gosto de aprender através da prática: montar, desmontar, testar, corrigir
+                            e procurar entender como as coisas funcionam por dentro. Tento aplicar
+                            nos projetos da escola o mesmo cuidado que gostaria de ver num trabalho
+                            profissional.
+                        </p>
+                        <p>
+                            O meu objetivo é continuar a evoluir na prática, ganhar experiência em
+                            suporte e redes, e construir uma base sólida para trabalhar na área de
+                            Tecnologias de Informação.
+                        </p>
+
+                        <div class="values-row">
+                            <span class="value-tag">Prática</span>
+                            <span class="value-tag">Organização</span>
+                            <span class="value-tag">Atenção ao detalhe</span>
+                            <span class="value-tag">Aprendizado contínuo</span>
+                        </div>
+                    </article>
+
+                    <aside class="card about-side">
+                        <p class="card-eyebrow">ÁREAS DE INTERESSE</p>
+                        <ul class="interest-list">
+                            <li>
+                                <span class="list-number">01</span>
+                                <span class="list-text">Suporte técnico e ajuda ao utilizador</span>
+                            </li>
+                            <li>
+                                <span class="list-number">02</span>
+                                <span class="list-text">Redes de computadores</span>
+                            </li>
+                            <li>
+                                <span class="list-number">03</span>
+                                <span class="list-text">Manutenção e montagem de hardware</span>
+                            </li>
+                            <li>
+                                <span class="list-number">04</span>
+                                <span class="list-text">Instalação de sistemas operativos</span>
+                            </li>
+                            <li>
+                                <span class="list-number">05</span>
+                                <span class="list-text">Desenvolvimento web básico</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Como trabalho</h2>
+                    <p>O processo que tento seguir em cada trabalho escolar, desde a ideia até à entrega.</p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="process-card">
+                        <span class="process-number">01</span>
+                        <h3>Compreender</h3>
+                        <p>Primeiro procuro entender o objetivo do trabalho, o que é pedido exatamente e quais requisitos não podem faltar.</p>
+                    </article>
+                    <article class="process-card">
+                        <span class="process-number">02</span>
+                        <h3>Planear</h3>
+                        <p>Organizo a estrutura do que vou fazer, divido em partes e preparo os materiais e ferramentas que vou precisar.</p>
+                    </article>
+                    <article class="process-card">
+                        <span class="process-number">03</span>
+                        <h3>Executar</h3>
+                        <p>Desenvolvo o trabalho com atenção, seguindo a estrutura planeada, aplicando os conhecimentos adquiridos na aula.</p>
+                    </article>
+                    <article class="process-card">
+                        <span class="process-number">04</span>
+                        <h3>Testar e melhorar</h3>
+                        <p>Reviso o resultado, testo se tudo funciona corretamente e ajusto os detalhes antes de entregar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="section section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Capacidades</h2>
+                    <p>Competências que estou desenvolvendo e que aplico nos meus trabalhos.</p>
+                </div>
+
+                <div class="cap-grid">
+                    <article class="cap-card">
+                        <span class="cap-number">01</span>
+                        <h3>Organização</h3>
+                        <p>Estruturação clara de pastas, ficheiros e conteúdo, seguindo uma ordem lógica tanto no HTML como no sistema de ficheiros.</p>
+                    </article>
+                    <article class="cap-card">
+                        <span class="cap-number">02</span>
+                        <h3>Construção</h3>
+                        <p>Desenvolvimento de páginas com HTML5 semântico e estilização com CSS3, usando grids, flexbox e componentes organizados.</p>
+                    </article>
+                    <article class="cap-card">
+                        <span class="cap-number">03</span>
+                        <h3>Responsividade</h3>
+                        <p>Páginas adaptadas para funcionar corretamente em computador, tablet e telemóvel, sem elementos cortados ou sobrepostos.</p>
+                    </article>
+                    <article class="cap-card">
+                        <span class="cap-number">04</span>
+                        <h3>Detalhe</h3>
+                        <p>Atenção aos pequenos acabamentos: estados de hover, foco visível, contraste, legendas e consistência visual em todo o projeto.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Registo Profissional</h2>
+                    <p>A minha formação até ao momento, por ordem cronológica.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-status"><span class="status-dot active"></span> Em curso</div>
+                        <h3>Técnico de Suporte Informático — CV4</h3>
+                        <p class="timeline-place">ITC — Instituto de Transportes e Comunicações · Maputo</p>
+                        <p class="timeline-desc">
+                            Formação em manutenção de computadores, redes de computadores, instalação de
+                            sistemas operativos, software, hardware e apoio ao utilizador.
+                        </p>
+                        <span class="timeline-year">2026</span>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-status"><span class="status-dot"></span> Concluído</div>
+                        <h3>Eletricidade Industrial — CV3</h3>
+                        <p class="timeline-place">ITC — Instituto de Transportes e Comunicações · Maputo</p>
+                        <p class="timeline-desc">
+                            Conhecimentos básicos de eletricidade, circuitos elétricos, medições,
+                            montagem de quadros e segurança no trabalho.
+                        </p>
+                        <span class="timeline-year">2025 – 2026</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="projetos" class="section section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Projetos</h2>
+                    <p>Trabalhos escolares e práticos desenvolvidos durante a minha formação.</p>
+                </div>
+
+                <div class="project-list">
+
+                   
+                    <article class="project-row">
+                        <div class="project-visual">
+                          
+                            <img src="c:\portifo lio IA\Router.png" alt="Pré-visualização do site sobre routers" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Trabalho escolar</span>
+                            </div>
+                            <h3>Site sobre Routers</h3>
+                            <p>
+                                Site informativo desenvolvido no Google Sites, com explicação sobre
+                                o que são routers, o seu funcionamento, características principais e
+                                a sua importância nas redes de computadores.
+                            </p>
+                            <dl class="project-dossier">
+                                <div>
+                                    <dt>Tipo</dt>
+                                    <dd>Site informativo</dd>
+                                </div>
+                                <div>
+                                    <dt>Foco</dt>
+                                    <dd>Redes / Pesquisa</dd>
+                                </div>
+                                <div>
+                                    <dt>Stack</dt>
+                                    <dd>Google Sites</dd>
+                                </div>
+                            </dl>
+                            <div class="project-actions">
+                                <a href="https://sites.google.com/view/trabalho-router/defini%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" class="text-link primary">
+                                    Ver projeto <span aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-row reverse">
+                        <div class="project-visual">
+                           
+                            <img src="c:\portifo lio IA\PIC DE B.I .jpeg" alt="Pré-visualização do cartão B.I." class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Exercício HTML / CSS</span>
+                            </div>
+                            <h3>Cartão de B.I.</h3>
+                            <p>
+                                Reprodução de um cartão de identificação moçambicano utilizando
+                                apenas HTML e CSS, trabalhando dimensões, proporções, cores,
+                                tipografia e posicionamento dos elementos.
+                            </p>
+                            <dl class="project-dossier">
+                                <div>
+                                    <dt>Tipo</dt>
+                                    <dd>Exercício de design</dd>
+                                </div>
+                                <div>
+                                    <dt>Foco</dt>
+                                    <dd>HTML / CSS</dd>
+                                </div>
+                                <div>
+                                    <dt>Stack</dt>
+                                    <dd>HTML5 / CSS3</dd>
+                                </div>
+                            </dl>
+                            <div class="project-actions">
+                               
+                                <a href="c:\portifo lio IA\Mike B.I.html" target="_blank" rel="noopener noreferrer" class="text-link primary">
+                                    Ver projeto <span aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                   
+                    <article class="project-row">
+                        <div class="project-visual">
+                           
+                            <img src="c:\portifo lio IA\PIC Projeto integrado .png" alt="Espaço reservado para o projeto integrado" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Projeto Integrado</span>
+                            </div>
+                            <h3>Projeto Integrado</h3>
+                            <p>
+                                Trabalho final que irá reunir conhecimentos de suporte informático,
+                                redes e desenvolvimento web numa solução prática, em construção.
+                            </p>
+                            <dl class="project-dossier">
+                                <div>
+                                    <dt>Tipo</dt>
+                                    <dd>Projeto escolar</dd>
+                                </div>
+                                <div>
+                                    <dt>Foco</dt>
+                                    <dd>Integração de conhecimentos</dd>
+                                </div>
+                                <div>
+                                    <dt>Stack</dt>
+                                    <dd>CV3</dd>
+                                </div>
+                            </dl>
+                            <div class="project-actions">
+                              
+                                <a href="c:\portifo lio IA\EXemplo_de_projecto_2[1][1]gd6[1].docx" class="text-link primary">
+                                    Baixar projeto <span aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                  
+                    <article class="project-row reverse">
+                        <div class="project-visual">
+                           
+                          
+                            <img src="c:\portifo lio IA\PIC de cisco.png" alt="Pré-visualização do cartão B.I." class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Simulação de redes</span>
+                            </div>
+                            <h3>Simulação</h3>
+                            <p>
+                                Uma actividade de Simulação de de redes, feita no ITC na sala de Informática C
+                            </p>
+                            <dl class="project-dossier">
+                                <div>
+                                    <dt>Tipo</dt>
+                                    <dd>Exercício Pratico</dd>
+                                </div>
+                                <div>
+                                    <dt>Foco</dt>
+                                    <dd>Redes</dd>
+                                </div>
+                                <div>
+                                    <dt>Stack</dt>
+                                    <dd>Cisco Packet Tracer Student</dd>
+                                </div>
+                            </dl>
+                            <div class="project-actions">
+                               
+                                <a href="c:\portifo lio IA\atividade_packet_tracer.docx" target="_blank" rel="noopener noreferrer" class="text-link primary">
+                                    Baixar projeto <span aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    
+        <section class="curriculo" id="curriculo">
+            <div class="curriculo-conteudo">
+                <h2>Currículo</h2>
+                <p>
+                    Obtenha o meu currículo, com as formações académicas.
+                </p>
+               
+                <a href="c:\portifo lio IA\mike curricilo.docx" download class="button button-primary">
+                    Baixar meu CV
+                </a>
+            </div>
+        </section>
+
+        
+        <section id="habilidades" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Habilidades técnicas</h2>
+                    <p>Competências que venho desenvolvendo através da formação e da prática.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>HTML</h3>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <p>Estruturação semântica de páginas, formulários, ligações e organização de conteúdo.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:80%"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>CSS</h3>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <p>Estilização, layouts com Flexbox e Grid, responsividade e identidade visual.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:70%"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>Redes</h3>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <p>Endereçamento IP, funcionamento de routers, cablagem estruturada e diagnóstico básico.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:60%"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>Suporte Técnico</h3>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <p>Instalação, configuração, resolução de problemas e apoio ao utilizador.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:75%"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>Hardware</h3>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <p>Montagem, desmontagem, limpeza e manutenção preventiva de computadores.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:65%"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-head">
+                            <h3>Sistemas Operativos</h3>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <p>Instalação, configuração e utilização de sistemas operativos e software comum.</p>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:70%"></div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="card other-tools">
+                    <p class="card-eyebrow">FERRAMENTAS E CONHECIMENTOS COMPLEMENTARES</p>
+                    <div class="tool-tags">
+                        <span>Microsoft Word</span>
+                        <span>Excel</span>
+                        <span>PowerPoint</span>
+                        <span>VS Code</span>
+                        <span>Instalação de Sistemas</span>
+                        <span>Backup</span>
+                        <span>Google Sites</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="galeria" class="section section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Registo de trabalhos</h2>
+                    <p>Algumas fotografias de atividades práticas e trabalhos realizados durante a formação.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                       
+                        <img src="c:\portifo lio IA\PIC de disjuntor.jpeg" alt="Fotografia de atividade prática 1">
+                        <figcaption>
+                            <strong>Atividade prática 01 CV3</strong>
+                            <small>Montagem de circuito elétrico — Prática de instalação e ligação de componentes elétricos.</small>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                    
+                        <img src="c:\portifo lio IA\PIC com mais velho.jpeg" alt="Fotografia de atividade prática 2">
+                        <figcaption>
+                            <strong>Atividade prática 02 CV3</strong>
+                            <small>Medição e teste elétrico — Utilização do multímetro para realizar medições de tensão elétrica.</small>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                       
+                        <img src="c:\portifo lio IA\PIC de  DIODO.jpeg" alt="Fotografia de atividade prática 3">
+                        <figcaption>
+                            <strong>Atividade prática 03 CV3</strong>
+                            <small>Montagem e teste de circuito eletrónico — Prática de montagem e verificação de componentes eletrónicos.</small>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contacto</h2>
+                    <p>Escolha o canal que preferir para entrar em contacto comigo.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-channels">
+                        <a href="/cdn-cgi/l/email-protection#b0dcd1ded7d1ddd9dbd58589f0d7ddd1d9dc9ed3dfdd" class="contact-link">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value"><span class="__cf_email__" data-cfemail="2549444b4244484c4e40101c654248444c490b464a48">langamike59@gmail.com</span></span>
+                           
+                        </a>
+                        <a href="tel:+258853020788" class="contact-link">
+                            <span class="contact-label">Telefone</span>
+                            <span class="contact-value">+258 85 302 0788</span>
+                         
+                        </a>
+                        <a href="https://wa.me/258853020788" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <span class="contact-label">WhatsApp</span>
+                            <span class="contact-value">Conversar no WhatsApp</span>
+                           
+                        </a>
+                      
+                        <a href="https://github.com/langamike59-cloud/Mike-Langa" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">Perfil do GitHub</span>
+                           
+                        </a>
+                        
+                    </article>
+
+                    <article class="card contact-form">
+                        <h3>Enviar mensagem</h3>
+                       
+                        <form action="mailto:langamike59@gmail.com" method="post" enctype="text/plain">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="Nome" placeholder="Digite o seu nome" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="Email" placeholder="Digite o seu email" required>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="assunto">Assunto</label>
+                                <input type="text" id="assunto" name="Assunto" placeholder="Sobre o que quer falar?">
+                            </div>
+                            <div class="form-field">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="Mensagem" placeholder="Escreva a sua mensagem..." required></textarea>
+                            </div>
+                            <button type="submit" class="button button-primary full-width">
+                                Enviar mensagem
+                               
+                            </button>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>© 2026 Mike Diocleciano Langa</p>
+        </div>
+    </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e3883a6b0a8468',t:'MTc4OTkzNTY0MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
